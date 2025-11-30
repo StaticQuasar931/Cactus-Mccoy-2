@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/icon.png" />
+  <title>Cactus McCoy 2 Unblocked Game - Play Online at School | StaticQuasar931</title>
+
+  <meta name="description" content="Play Cactus McCoy 2 unblocked with Ruffle. Explore levels, collect treasures, and beat up enemies in this classic platformer. Works at school, home, and on Chromebooks on StaticQuasar931." />
+  <meta name="keywords" content="Cactus McCoy 2, Cactus McCoy 2 unblocked, Cactus McCoy 2 game, Cactus McCoy 2 g@me, Cactus McCoy 2 online, Cactus McCoy 2 school, Cactus McCoy 2 platformer, action platformer unblocked, adventure games unblocked, Flash game unblocked, Flash g@me unblocked, StaticQuasar931 unblocked games, working at school" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Cactus McCoy 2 Unblocked Game - Play Online" />
+  <meta property="og:description" content="Run, fight, and explore in Cactus McCoy 2 unblocked with Ruffle on StaticQuasar931." />
+  <meta property="og:image" content="cactusmccoy2_400x226.jpg" />
+
+  <style>
+    html, body{
+      margin:0;
+      padding:0;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      background:#000;
+      color:#eaf4ff;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+
+    #staticMenu{
+      position:fixed;
+      left:12px;
+      top:12px;
+      z-index:9999;
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 14px;
+      border-radius:12px;
+      background:rgba(20,20,28,.85);
+      border:1px solid rgba(94,225,255,.35);
+      color:#e8f3ff;
+      font-size:14px;
+    }
+    #staticMenu a{ color:#5ee1ff; font-weight:800; text-decoration:none }
+    #closeStaticMenu{
+      color:#f55;
+      cursor:pointer;
+      padding:2px 6px;
+      border-radius:6px;
+      border:1px solid rgba(255,255,255,.15);
+      background:rgba(255,255,255,.06);
+    }
+
+    #staticSlideMenu{
+      position:fixed;
+      bottom:24px;
+      right:24px;
+      width:100px;
+      height:100px;
+      opacity:0;
+      pointer-events:none;
+      transform:translateX(140px) scale(.96);
+      z-index:9999;
+    }
+    #staticSlideMenu img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      transition:opacity .25s ease;
+    }
+    .slide-in{ animation:slideIn 2s ease forwards }
+    .slide-out{ animation:slideOut 2s ease forwards }
+    @keyframes slideIn{
+      from{opacity:0; transform:translateX(140px) scale(.96)}
+      to{opacity:1; transform:translateX(0) scale(1)}
+    }
+    @keyframes slideOut{
+      from{opacity:1; transform:translateX(0) scale(1)}
+      to{opacity:0; transform:translateX(140px) scale(.96)}
+    }
+
+    #gameWrapper{
+      position:fixed;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#000;
+    }
+    #gameContainer{
+      width:100vw;
+      height:100vh;
+      background:#000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    #gameLoadingText{
+      font-size:18px;
+      color:#9fdcff;
+      text-shadow:0 0 6px rgba(94,225,255,.7);
+      text-align:center;
+      padding:0 12px;
+    }
+
+    .seo-hidden{
+      position:absolute;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+      clip:rect(1px,1px,1px,1px);
+      white-space:nowrap;
+    }
+  </style>
+
+  <script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+      scale: "exactfit",
+      forceScale: true,
+      letterbox: "off"
+    };
+  </script>
+</head>
+<body>
+
+  <div id="staticMenu">
+    <a href="https://sites.google.com/view/staticquasar931/gm3z" target="_blank">More Unblocked Games by Static</a>
+    <span id="closeStaticMenu">✕</span>
+  </div>
+
+  <div id="staticSlideMenu">
+    <a id="staticSlideLink" href="https://sites.google.com/view/staticquasar931/google-form" target="_blank">
+      <img id="staticSlideImg" src="https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/GoogleForm.png" alt="StaticQuasar931 Google Form">
+    </a>
+  </div>
+
+  <div id="gameWrapper">
+    <div id="gameContainer">
+      <div id="gameLoadingText">Loading Cactus McCoy 2 unblocked with Ruffle...</div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+
+  <script>
+    window.onbeforeunload = () => "Are you sure you want to leave this page?";
+
+    (function(){
+      const menu=document.getElementById("staticMenu");
+      const btn=document.getElementById("closeStaticMenu");
+      const KEY="sq931_staticMenu_hidden_until";
+      const show=()=>menu.style.display="flex";
+      const hide=()=>{
+        menu.style.display="none";
+        const until=Date.now()+180000;
+        localStorage.setItem(KEY,until);
+        setTimeout(show,180000);
+      };
+      const until=parseInt(localStorage.getItem(KEY)||0,10);
+      if(until>Date.now()){
+        menu.style.display="none";
+        setTimeout(show,until-Date.now());
+      }
+      btn.onclick=hide;
+    })();
+
+    (function(){
+      const wrap=document.getElementById("staticSlideMenu");
+      const a=document.getElementById("staticSlideLink");
+      const img=document.getElementById("staticSlideImg");
+
+      const FORM={src:"https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/GoogleForm.png",link:"https://sites.google.com/view/staticquasar931/google-form"};
+      const DISCORD={src:"https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/Join_Our_DC_StaticQuassar931_lcplrf.png",link:"https://discord.gg/DP2hM7RRhR"};
+      const INSTA={src:"https://cdn.jsdelivr.net/gh/StaticQuasar931/Images@main/Follow-us--IG",link:"https://www.instagram.com/freeschoolgamepage/"};
+      const ROT=[FORM,DISCORD,INSTA];
+
+      ROT.forEach(o=>{const p=new Image();p.src=o.src;});
+
+      let i=0;
+      async function cycle(){
+        while(true){
+          a.href=ROT[i].link;
+          img.style.opacity="0";
+          setTimeout(()=>img.src=ROT[i].src,80);
+          img.onload=()=>img.style.opacity="1";
+
+          wrap.style.pointerEvents="auto";
+          wrap.classList.add("slide-in");
+          await new Promise(r=>setTimeout(r,7000));
+
+          wrap.classList.remove("slide-in");
+          wrap.classList.add("slide-out");
+          await new Promise(r=>setTimeout(r,2000));
+
+          wrap.style.pointerEvents="none";
+          await new Promise(r=>setTimeout(r,20000));
+
+          wrap.classList.remove("slide-out");
+          i=(i+1)%ROT.length;
+        }
+      }
+      cycle();
+    })();
+
+    (function(){
+      const ids=["staticMenu","staticSlideMenu"];
+      let seq=[];
+      const target=["y","u","i"];
+      function toggle(){
+        ids.forEach(id=>{
+          const el=document.getElementById(id);
+          if(!el)return;
+          const h=el.style.display==="none";
+          el.style.display=h?(id==="staticMenu"?"flex":"block"):"none";
+        });
+      }
+      window.addEventListener("keydown",e=>{
+        seq.push(e.key.toLowerCase());
+        if(seq.length>3)seq.shift();
+        if(seq.join("")===target.join(""))toggle();
+      });
+    })();
+
+    window.addEventListener("load",()=>{
+      const c=document.getElementById("gameContainer");
+      const loading=document.getElementById("gameLoadingText");
+
+      const ruffle=window.RufflePlayer.newest();
+      const player=ruffle.createPlayer();
+
+      c.innerHTML="";
+      c.appendChild(player);
+
+      player.style.width="100%";
+      player.style.height="100%";
+
+      if(loading) loading.textContent="Starting Ruffle and loading Cactus McCoy 2...";
+
+      player.load({
+        url: "cactusmccoy2.swf",
+        scale: "exactfit",
+        forceScale: true,
+        letterbox: "off"
+      });
+    });
+  </script>
+
+  <div class="seo-hidden">
+    <h1>Cactus McCoy 2 Unblocked Game Online</h1>
+    <p>
+      Cactus McCoy 2 unblocked lets you explore levels, collect treasure, and fight enemies in a wild
+      action platformer. This version uses Ruffle so it still works even without the old Flash plugin
+      and is designed to run on school Chromebooks, home devices, and more.
+    </p>
+    <p>
+      Play Cactus McCoy 2 unblocked and other action and adventure games on
+      https://sites.google.com/view/staticquasar931/gm3z where StaticQuasar931 hosts many unblocked
+      game and g@me options that work at school, work, and anywhere a browser can reach.
+    </p>
+  </div>
+
+</body>
+</html>
